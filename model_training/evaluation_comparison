@@ -1,0 +1,45 @@
+evaluation : 
+sambhav@sambhavIsAHost:~/AI_project$ python3 evaluate_pretrained.py 
+
+===== Evaluating Pretrained YOLOv8n =====
+Ultralytics 8.3.96  Python-3.10.12 torch-2.6.0+cu124 CPU (12th Gen Intel Core(TM) i7-12650H)
+YOLOv8n summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+val: Scanning /home/sambhav/AI_project/coco_subset/test/labels.cache... 480 images, 0 backgrounds, 0 corrupt: 100%|██████████| 480/480 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 30/30 [00:30<00:00,  1.02s/it]
+                   all        480       2238      0.137      0.116      0.134     0.0991
+                person        305       1159      0.822      0.696      0.804      0.594
+               bicycle        105        184          0          0          0          0
+                   car        171        486          0          0    0.00221    0.00116
+            motorcycle        103        129          0          0    0.00079   0.000158
+              airplane        109        132          0          0          0          0
+                   bus         81        148          0          0          0          0
+Speed: 1.0ms preprocess, 56.2ms inference, 0.0ms loss, 2.2ms postprocess per image
+Results saved to runs/detect/val2
+
+Results for Pretrained YOLOv8n:
+mAP@0.5:  0.0991
+Precision: 0.1370
+Recall:    0.1161
+F1 Score:  0.1256
+
+===== Evaluating Custom Trained YOLOv8n =====
+Ultralytics 8.3.96  Python-3.10.12 torch-2.6.0+cu124 CPU (12th Gen Intel Core(TM) i7-12650H)
+Model summary (fused): 72 layers, 3,006,818 parameters, 0 gradients, 8.1 GFLOPs
+val: Scanning /home/sambhav/AI_project/coco_subset/test/labels.cache... 480 images, 0 backgrounds, 0 corrupt: 100%|██████████| 480/480 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 30/30 [00:32<00:00,  1.09s/it]
+                   all        480       2238      0.525      0.412      0.423      0.288
+                person        305       1159      0.696      0.662      0.717      0.471
+                 chair        105        184      0.359      0.191      0.183      0.114
+                 knife        171        486      0.512      0.331       0.35      0.213
+                laptop        103        129      0.725      0.659      0.717      0.586
+              scissors        109        132      0.382      0.295      0.244      0.157
+            cell phone         81        148      0.475      0.331      0.325      0.187
+Speed: 1.0ms preprocess, 59.2ms inference, 0.0ms loss, 0.8ms postprocess per image
+Results saved to runs/detect/val3
+
+Results for Custom Trained YOLOv8n:
+mAP@0.5:  0.2877
+Precision: 0.5248
+Recall:    0.4115
+F1 Score:  0.4613
+
