@@ -1,5 +1,5 @@
 evaluation : 
-sambhav@sambhavIsAHost:~/AI_project$ python3 evaluate_pretrained.py 
+
 
 ===== Evaluating Pretrained YOLOv8n =====
 Ultralytics 8.3.96  Python-3.10.12 torch-2.6.0+cu124 CPU (12th Gen Intel Core(TM) i7-12650H)
